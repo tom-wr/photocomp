@@ -1,0 +1,20 @@
+{
+    "name": "machineheart/public",
+    "require": {
+        "twig/twig": "^2.4",
+        "phpmailer/phpmailer": "^6.0",
+        "twitter/bootstrap": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "tom-wr",
+            "email": "tadw20@bath.ac.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    }
+}

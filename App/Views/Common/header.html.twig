@@ -1,0 +1,14 @@
+
+<nav class="navbar navbar-light navbar-fixed-top">
+    <a class="navbar-brand" href="/">
+            <i class="fa fa-camera-retro" aria-hidden="true"></i>
+            Photo Competition
+    </a>
+
+    {% if current_user %}
+        <div class="pull-right">
+            <a href="/users/logout" class="btn btn-info">Logout</a>
+        </div>
+    {%  endif %}
+
+</nav>

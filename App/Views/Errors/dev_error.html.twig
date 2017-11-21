@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Error</h1>
+    <p>Uncaught exception: {{ error.class }}</p>
+    <p>Message: {{ error.message }}</p>
+    <pre>Stack trace: {{ error.stack_trace }}</pre>
+    <p>In {{ error.file }} on line {{ error.line }}</p>
+{% endblock %}

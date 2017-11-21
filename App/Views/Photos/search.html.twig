@@ -1,0 +1,36 @@
+{%  extends "base.html.twig" %}
+
+{% block body %}
+    <div class="gallery">
+        <h1>Search Results</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form class="form-inline" id="form-search" action="/photos/search">
+                    <div class="form-group"></div>
+                    or
+                    <div class="form-group">
+                        <label for="form-gallery-caption">Search caption text: </label>
+                        <input name="search" type="text" class="form-control" id="form-gallery-caption" placeholder="Search caption text"/>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            {% for photo in photos %}
+                <div class="gallery-photo col-md-3">
+                    <div class="card-1">
+                        <div class="card-photo" style="background-image: url(./{{ photo.filename }}); width: 100%; height: 300px"></div>
+                        <div class="card-body">
+                            <p class="card-text">{{ photo.caption }}</p>
+                            <p class="card-text">{{ photo.uid }}fdsafds</p>
+                            <p class="card-text">{{ photo.date }}10/20/23</p>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

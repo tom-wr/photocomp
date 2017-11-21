@@ -1,0 +1,29 @@
+{%  extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="row justify-content-center top-padder">
+        <div class="col-md-4">
+
+    <h1>Log in</h1>
+        <form id="form-login" method="post" action="/users/enter">
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input id="inputEmail" class="form-control" name="email" placeholder="email" value="{{ email }}" required/>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="password" required/>
+            </div>
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script src="/js/vendor/hideshowpassword.js"></script>
+    <script src="/js/form.js"></script>
+{% endblock %}

@@ -1,0 +1,181 @@
+[19-Nov-2017 18:09:56 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:22:13 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:22:13 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "Errors/error.html.twig" (looked into: ../App/Views). in /vagrant/public/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /vagrant/public/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('Errors/error.ht...')
+#1 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('Errors/error.ht...')
+#2 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('Errors/error.ht...')
+#3 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('Errors/error.ht...')
+#4 /vagrant/public/Core/View.php(23): Twig_Environment->render('Errors/error.ht...', Array)
+#5 /vagrant/public/Core/Error.php(59): Core\View::render('Errors/error.ht...', Array)
+#6 /vagrant/public/Core/Error.php(40): Core\Error::logError(Array)
+#7 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#8 {main}
+  thro in /vagrant/public/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[19-Nov-2017 18:22:47 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:22:47 UTC] PHP Fatal error:  Uncaught Twig_Error_Syntax: A template that extends another one cannot include contents outside Twig blocks. Did you forget to put the contents inside a {% block %} tag? in /vagrant/public/App/Views/Errors/error.html.twig:2
+Stack trace:
+#0 /vagrant/public/vendor/twig/twig/lib/Twig/Parser.php(339): Twig_Parser->filterBodyNodes(Object(Twig_Node_Text))
+#1 /vagrant/public/vendor/twig/twig/lib/Twig/Parser.php(81): Twig_Parser->filterBodyNodes(Object(Twig_Node))
+#2 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(529): Twig_Parser->parse(Object(Twig_TokenStream))
+#3 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(561): Twig_Environment->parse(Object(Twig_TokenStream))
+#4 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(368): Twig_Environment->compileSource(Object(Twig_Source))
+#5 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('Errors/error.ht...')
+#6 /vagrant/public/Core/View.php(23): Twig_Environment->render('Errors/error.ht...', Array)
+#7 in /vagrant/public/App/Views/Errors/error.html.twig on line 2
+[19-Nov-2017 18:22:49 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:22:49 UTC] PHP Fatal error:  Uncaught Twig_Error_Syntax: A template that extends another one cannot include contents outside Twig blocks. Did you forget to put the contents inside a {% block %} tag? in /vagrant/public/App/Views/Errors/error.html.twig:2
+Stack trace:
+#0 /vagrant/public/vendor/twig/twig/lib/Twig/Parser.php(339): Twig_Parser->filterBodyNodes(Object(Twig_Node_Text))
+#1 /vagrant/public/vendor/twig/twig/lib/Twig/Parser.php(81): Twig_Parser->filterBodyNodes(Object(Twig_Node))
+#2 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(529): Twig_Parser->parse(Object(Twig_TokenStream))
+#3 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(561): Twig_Environment->parse(Object(Twig_TokenStream))
+#4 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(368): Twig_Environment->compileSource(Object(Twig_Source))
+#5 /vagrant/public/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('Errors/error.ht...')
+#6 /vagrant/public/Core/View.php(23): Twig_Environment->render('Errors/error.ht...', Array)
+#7 in /vagrant/public/App/Views/Errors/error.html.twig on line 2
+[19-Nov-2017 18:23:08 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:23:16 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Z not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('z')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:23:28 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Products not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('products')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:23:35 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\Products not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('products/juice')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:23:43 UTC] Uncaught Exception:Exception
+Message:no route matched
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('photos/2')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:88
+
+[19-Nov-2017 18:23:49 UTC] Uncaught Exception:Exception
+Message:no route matched
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('photos/2')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:88
+
+[19-Nov-2017 18:23:55 UTC] Uncaught Exception:Exception
+Message:no route matched
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('photos/900')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:88
+
+[19-Nov-2017 18:24:06 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\P not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('p')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 18:24:33 UTC] Uncaught Exception:Exception
+Message:Controller class App\Controllers\P not found
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('p')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:85
+
+[19-Nov-2017 20:33:19 UTC] Uncaught Exception:Exception
+Message:no route matched
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:88
+
+[19-Nov-2017 20:33:22 UTC] Uncaught Exception:Exception
+Message:Method goAction not found in controller App\Controllers\Users
+Stack trace:#0 /vagrant/public/Core/Router.php(80): Core\Controller->__call('go', Array)
+#1 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/go')
+#2 {main}
+File:/vagrant/public/Core/Controller.php
+Line:30
+
+[19-Nov-2017 20:34:31 UTC] Uncaught Exception:Error
+Message:Call to undefined function App\Controllers\render()
+Stack trace:#0 [internal function]: App\Controllers\Users->signupAction()
+#1 /vagrant/public/Core/Controller.php(26): call_user_func_array(Array, Array)
+#2 /vagrant/public/Core/Router.php(80): Core\Controller->__call('signup', Array)
+#3 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/signup')
+#4 {main}
+File:/vagrant/public/App/Controllers/Users.php
+Line:20
+
+[19-Nov-2017 20:47:57 UTC] Uncaught Exception:Exception
+Message:no route matched
+Stack trace:#0 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/users/cre...')
+#1 {main}
+File:/vagrant/public/Core/Router.php
+Line:88
+
+[19-Nov-2017 21:34:06 UTC] Uncaught Exception:ErrorException
+Message:Undefined property: App\Models\User::$name
+Stack trace:#0 /vagrant/public/App/Models/User.php(45): Core\Error::errorHandler(8, 'Undefined prope...', '/vagrant/public...', 45, Array)
+#1 /vagrant/public/App/Models/User.php(23): App\Models\User->validate()
+#2 /vagrant/public/App/Controllers/Users.php(27): App\Models\User->save()
+#3 [internal function]: App\Controllers\Users->createAction()
+#4 /vagrant/public/Core/Controller.php(26): call_user_func_array(Array, Array)
+#5 /vagrant/public/Core/Router.php(80): Core\Controller->__call('create', Array)
+#6 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/create')
+#7 {main}
+File:/vagrant/public/App/Models/User.php
+Line:45
+
+[19-Nov-2017 21:34:36 UTC] Uncaught Exception:ErrorException
+Message:Undefined property: App\Models\User::$name
+Stack trace:#0 /vagrant/public/App/Models/User.php(45): Core\Error::errorHandler(8, 'Undefined prope...', '/vagrant/public...', 45, Array)
+#1 /vagrant/public/App/Models/User.php(23): App\Models\User->validate()
+#2 /vagrant/public/App/Controllers/Users.php(27): App\Models\User->save()
+#3 [internal function]: App\Controllers\Users->createAction()
+#4 /vagrant/public/Core/Controller.php(26): call_user_func_array(Array, Array)
+#5 /vagrant/public/Core/Router.php(80): Core\Controller->__call('create', Array)
+#6 /vagrant/public/public/index.php(22): Core\Router->dispatch('users/create')
+#7 {main}
+File:/vagrant/public/App/Models/User.php
+Line:45
+

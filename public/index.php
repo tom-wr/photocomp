@@ -2,15 +2,21 @@
 /**
  * FRONT CONTROLLER
  */
+
+//composer autoloading
 require '../vendor/autoload.php';
 
 use Core\Router;
 
+// Set error reporting
 error_reporting(E_ALL);
 set_error_handler('Core\Error::errorHandler');
 set_exception_handler('Core\Error::exceptionHandler');
 
+// Start the session
 session_start();
+
+// Start router and initialise routes
 
 $router = new Router();
 
@@ -24,11 +30,4 @@ $router->add('{controller}/{action}');
 $router->add('photos/{id:\d+}/show', ['controller' => 'Photos', 'action' => 'show']);
 
 $router->dispatch($_SERVER['QUERY_STRING']);/*
-
-echo '<pre>';
-//var_dump($router->getRoutes());
-echo '</pre>';
-echo '<pre>';
-var_dump($router->getParams());
-echo '</pre>';*/
 

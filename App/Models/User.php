@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Core\Auth;
 use Core\Model;
 use PDO;
 
@@ -29,6 +30,7 @@ class User extends Model
     {
         // validate the properties
         $this->validate();
+
         // if not errors
         if(empty($this->errors)) {
             // create a password hash
@@ -90,6 +92,10 @@ class User extends Model
         {
             $this->errors[] = 'Password needs at least one number';
         }
+        $captchaValidation = Auth::validateCaptcha($_POST['g-recaptcha-response']);
+        if($captchaValidation['success'] === false) {
+            $this->errors[] = 'Invalid captcha';
+        }
     }
 
     /**
@@ -123,7 +129,7 @@ class User extends Model
      * Authenticate a user by checking that the given password verifies against the given email
      * @param $email
      * @param $password
-     * @return bool|mixed returns a Users object if succesful and false if not
+     * @return bool|mixed returns a Users object if successful and false if not
      */
     public static function authenticate($email, $password)
     {

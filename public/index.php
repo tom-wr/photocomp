@@ -21,13 +21,16 @@ session_start();
 $router = new Router();
 
 $router->add('', ['controller' => 'Pages', 'action' => 'home']);
+$router->add('contact', ['controller' => 'Pages', 'action' => 'contact']);
+$router->add('contact/send', ['controller' => 'Pages', 'action' => 'contactSend']);
 $router->add('login', ['controller' => 'Users', 'action' => 'login']);
 $router->add('logout', ['controller' => 'Users', 'action' => 'logout']);
 $router->add('signup', ['controller' => 'Users', 'action' => 'signup']);
 $router->add('submit', ['controller' => 'Photos', 'action' => 'submit']);
+$router->add('progress', ['controller' => 'Progress', 'action' => 'progress']);
 $router->add('{controller}');
 $router->add('{controller}/{action}');
 $router->add('photos/{id:\d+}/show', ['controller' => 'Photos', 'action' => 'show']);
 
-$router->dispatch($_SERVER['QUERY_STRING']);/*
+$router->dispatch($_SERVER['QUERY_STRING']);
 

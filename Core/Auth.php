@@ -95,4 +95,15 @@ class Auth
         }
     }
 
+    public static function validateCaptcha($post_response) {
+
+        $secretKey = '6Lfj-zkUAAAAAIxPhuOc1G3LikmUGgJ8YEVc97Q9';
+        $responseKey = $post_response;
+        $userIp = $_SERVER['REMOTE_ADDR'];
+        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIp";
+        $validation = file_get_contents($url);
+        return json_decode($validation, true);
+
+    }
+
 }

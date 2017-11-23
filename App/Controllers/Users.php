@@ -7,6 +7,7 @@ use App\Models\User;
 use Core\Controller;
 use Core\Flasher;
 use Core\View;
+use Facebook\Facebook;
 
 /**
  * Class Users
@@ -28,7 +29,15 @@ class Users extends Controller
      */
     public function loginAction()
     {
-        View::render('Users/login.html.twig');
+        /*$fb = new Facebook([
+            'app_id' => '156026275012289',
+            'app_secret' => '9de92b9e29f5ac3f785c2d96b60b386a',
+            'default_graph_version' => 'v2.2',
+        ]);
+        $helper = $fb->getRedirectLoginHelper();
+        $permissions = ['email'];
+        $loginUrl = $helper->getLoginUrl('http://localhost/facebook-login', $permissions);*/
+        View::render('Users/login.html.twig');//, ['facebook_login' => $loginUrl]);
     }
 
     /**
@@ -38,6 +47,7 @@ class Users extends Controller
     {
         // create a new user from post data
         $user = new User($_POST);
+
         if($user->save()) {
             // authenticate user
             $user = User::authenticate($user->email, $user->password);
@@ -84,6 +94,11 @@ class Users extends Controller
     {
         Auth::logout();
         $this->redirect('/');
+    }
+
+    public function facebookCallbackAction()
+    {
+
     }
 
 }

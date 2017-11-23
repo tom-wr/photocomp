@@ -25,6 +25,24 @@ $(document).ready(function(){
         }
     });
 
+    $('#form-contact').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true,
+                errorClass: 'invalid-feedback'
+            },
+            name: {
+                required: true,
+                minlength: 1,
+            },
+            number: {
+                required: false,
+                digits: true
+            }
+        }
+    });
+
 
 });
 

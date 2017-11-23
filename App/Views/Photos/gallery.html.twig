@@ -25,9 +25,6 @@
             {% for photo in photos %}
                 <div class="gallery-photo col-lg-4">
                     <div class="card-1">
-                        <a class="twitter-share twitter-share-button" href="https://twitter.com/intent/tweet">
-                            <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
-                        </a>
                         <a href="/photos/{{ photo.id }}/show">
                             <div class="card-photo" style="background-image: url(/{{ photo.filename }}); width: 100%;"></div>
                         </a>

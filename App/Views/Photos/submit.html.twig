@@ -25,10 +25,12 @@
                     <label for="caption">Caption: </label>
                     <textarea class="form-control" type="text-area" id=caption name="caption"></textarea>
                 </div>
-
                 <input type="submit" value="Submit" />
 
             </form>
+            <div id="upload-progress" class="progress">
+                <div id="upload-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -43,4 +45,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
     <script src="/js/vendor/dropzone.js"></script>
     <script src="/js/form.js"></script>
+    <script>
+    </script>
 {% endblock %}

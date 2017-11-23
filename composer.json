@@ -3,7 +3,8 @@
     "require": {
         "twig/twig": "^2.4",
         "phpmailer/phpmailer": "^6.0",
-        "twitter/bootstrap": "^3.3"
+        "twitter/bootstrap": "^3.3",
+        "facebook/graph-sdk": "^5.6"
     },
     "authors": [
         {

@@ -2,9 +2,12 @@
 
 {%  block body %}
 
+    {%  include "Common/social_media.html.twig" %}
+
     <div class="row justify-content-center">
         <div class="col-md-8 full-image text-center">
-            <img class="col-md-12 img-responsive" src="/{{ photo.filename }}" />
+            <div class="col-md-12"></div>
+            <img class="img-responsive card-2" src="/{{ photo.filename }}" />
         </div>
     </div>
 

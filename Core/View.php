@@ -24,6 +24,8 @@ class View
             // Set twig globals
             $twig->addGlobal('current_user', Auth::getUser());
             $twig->addGlobal('flash', Flasher::getMessages());
+            $twig->addGlobal('current_url', 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
+            $twig->addGlobal('upload_progress', ini_get("session.upload_progress.name"));
         }
 
         echo $twig->render($view, $args);

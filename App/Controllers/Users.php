@@ -2,11 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Config;
 use Core\Auth;
 use App\Models\User;
 use Core\Controller;
+use Core\Error;
+use Core\FacebookLogin;
 use Core\Flasher;
 use Core\View;
+use Facebook\Exceptions\FacebookResponseException;
+use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
 
 /**
@@ -16,6 +21,11 @@ use Facebook\Facebook;
  */
 class Users extends Controller
 {
+    /**
+     * @var FacebookLogin
+     */
+    protected $facebookLogin;
+
     /**
      * Render the signup form
      */
@@ -29,15 +39,9 @@ class Users extends Controller
      */
     public function loginAction()
     {
-        /*$fb = new Facebook([
-            'app_id' => '156026275012289',
-            'app_secret' => '9de92b9e29f5ac3f785c2d96b60b386a',
-            'default_graph_version' => 'v2.2',
-        ]);
-        $helper = $fb->getRedirectLoginHelper();
-        $permissions = ['email'];
-        $loginUrl = $helper->getLoginUrl('http://localhost/facebook-login', $permissions);*/
-        View::render('Users/login.html.twig');//, ['facebook_login' => $loginUrl]);
+        $this->facebookLogin = new FacebookLogin();
+        $loginUrl = $this->facebookLogin->getLoginUrl();
+        View::render('Users/login.html.twig', ['facebook_login' => $loginUrl]);
     }
 
     /**
@@ -98,6 +102,35 @@ class Users extends Controller
 
     public function facebookCallbackAction()
     {
+        $accessToken = '';
+        // Get access token
+        try {
+            $accessToken = $this->facebookLogin->getAccessToken();
+        } catch (FacebookResponseException $e) {
+            Error::exceptionHandler($e);
+        } catch (FacebookSDKException $e) {
+            Error::exceptionHandler($e);
+        }
+        // Redirect if access token is not set
+        if($accessToken === '') {
+            $this->redirect('/login');
+        }
+
+        // get long lived access token
+        $oAuth2Client = $this->facebookLogin->getOAuth2Client();
+        if(!$accessToken->isLongLived()) {
+            $accessToken = $oAuth2Client->getLongLivedAccessToken();
+        }
+
+        // get the data from the response graph node
+        $response = $this->facebookLogin->getFb()->get('me?fields=id, first_name, last_name, email', $accessToken);
+        $userData = $response->getGraphNode()->asArray();
+
+        // set the session data
+        $_SESSION['userData'] = $userData;
+        $_SESSION['access_token'] = $accessToken;
+
+
 
     }
 

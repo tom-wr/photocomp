@@ -95,10 +95,14 @@ class Auth
         }
     }
 
-    public static function validateCaptcha($post_response) {
+    /**
+     * Validates a captcha response from given response key.
+     * @param $post_response
+     * @return mixed
+     */
+    public static function validateCaptcha($responseKey) {
 
         $secretKey = '6Lfj-zkUAAAAAIxPhuOc1G3LikmUGgJ8YEVc97Q9';
-        $responseKey = $post_response;
         $userIp = $_SERVER['REMOTE_ADDR'];
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIp";
         $validation = file_get_contents($url);

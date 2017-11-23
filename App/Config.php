@@ -30,6 +30,8 @@ class Config
     const SMTP_SECURE = 'ssl';
     const SMTP_PORT = 465;
 
-
+    const FACEBOOK_APP_ID = '156026275012289';
+    const FACEBOOK_APP_SECRET = '9de92b9e29f5ac3f785c2d96b60b386a';
+    const FACEBOOK_GRAPH_VERSION = 'v2.2';
 
 }
